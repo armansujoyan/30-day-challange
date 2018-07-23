@@ -3,8 +3,10 @@
 
 body {
     background-color: $backgroundCol;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     main {
-        margin: 0 auto;
         background-color: #1A1A1A;
         width: 270px;
         min-width: 270px;
