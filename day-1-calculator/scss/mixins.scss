@@ -1,0 +1,7 @@
+@mixin calchover($color, $lighten, $opacity: 0.5){
+    &:hover {
+        background-color: lighten($color, $lighten);
+        border-radius: 26px;
+        opacity: $opacity;
+    }
+}

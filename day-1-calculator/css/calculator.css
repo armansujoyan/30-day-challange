@@ -88,6 +88,12 @@ body div#controls div.ui-button {
   cursor: pointer;
 }
 
+body div#controls div.ui-button:hover {
+  background-color: #4d4d4d;
+  border-radius: 26px;
+  opacity: 0.5;
+}
+
 body div#controls div.zero-btn {
   width: 40%;
   padding-left: 10%;
@@ -103,4 +109,10 @@ body div#controls div.action-btn {
 body div#controls div.equal-btn {
   background-color: #FF2E2B;
   border-radius: 24px;
+}
+
+body div#controls div.equal-btn:hover {
+  background-color: #ff605e;
+  border-radius: 26px;
+  opacity: 0.95;
 }
