@@ -1,0 +1,71 @@
+$backgroundCol: #FFF9EE;
+$calcBackCol: #1A1A1A;
+$regularCol: #FFFFFF;
+$primaryCol: #FF2E2B;
+$secondaryCol: #787878;
+
+body {
+    background-color: $backgroundCol;
+    main {
+        margin: 0 auto;
+        background-color: #1A1A1A;
+        width: 270px;
+        min-width: 270px;
+        height: 570px;
+        border-radius: 37px;
+        padding-top: 1px;
+        margin-top: -1px;
+    }
+    header {
+        width: 90%;
+        height: 40%;
+        margin: 5% 5%;
+        border-bottom: 2px solid $secondaryCol;
+        div {
+            width: 100%;
+            height: 65%;
+            padding-bottom: 5%;
+        }
+        output {
+            width: 100%;
+            display: block;
+            height: 20%;
+            margin-top: 2%;
+            padding-bottom: 8%;
+        }
+    }
+    div#controls {
+        width: 90%;
+        height: 54%;
+        margin: 0 5%;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        div {
+            &.ui-button {
+                width: 23%;
+                height: 18%;
+                font-weight: normal;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $regularCol;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                cursor: pointer;
+            }
+            &.zero-btn {
+                width: 40%;
+                padding-left: 10%;
+                justify-content: flex-start;
+            }
+            &.action-btn {
+                color: $primaryCol;
+            }
+            &.equal-btn {
+                background-color: $primaryCol;
+                border-radius: 24px;
+            }
+        }
+    }
+}

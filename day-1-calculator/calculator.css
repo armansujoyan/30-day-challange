@@ -1,0 +1,87 @@
+body {
+  background-color: #FFF9EE;
+}
+
+body main {
+  margin: 0 auto;
+  background-color: #1A1A1A;
+  width: 270px;
+  min-width: 270px;
+  height: 570px;
+  border-radius: 37px;
+  padding-top: 1px;
+  margin-top: -1px;
+}
+
+body header {
+  width: 90%;
+  height: 40%;
+  margin: 5% 5%;
+  border-bottom: 2px solid #787878;
+}
+
+body header div {
+  width: 100%;
+  height: 65%;
+  padding-bottom: 5%;
+}
+
+body header output {
+  width: 100%;
+  display: block;
+  height: 20%;
+  margin-top: 2%;
+  padding-bottom: 8%;
+}
+
+body div#controls {
+  width: 90%;
+  height: 54%;
+  margin: 0 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+body div#controls div.ui-button {
+  width: 23%;
+  height: 18%;
+  font-weight: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+body div#controls div.zero-btn {
+  width: 40%;
+  padding-left: 10%;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+body div#controls div.action-btn {
+  color: #FF2E2B;
+}
+
+body div#controls div.equal-btn {
+  background-color: #FF2E2B;
+  border-radius: 24px;
+}
