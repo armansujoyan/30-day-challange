@@ -1,14 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // General variables to be used
     const buttons = document.querySelectorAll('.ui-button');
     const history = document.querySelector('#history #history-out');
     const current = document.querySelector('#current #output-text');
     let executionLine = "";
 
+    // Modifying history display for aesthetic reasons and better UX.g
+
+    // Fucntion to check if the current input button is an action button.
     const isAction = function(symbol) {
         return symbol === '+' || symbol === '-' || symbol === '/' || symbol === 'x'
                 || symbol === '%';
     }
 
+    // Generic symbol input for the expression
     const addSymbol = function (symbol) {
         let last = executionLine[executionLine.length-1];
         if (last === '.' && isAction(symbol)) {
@@ -22,11 +27,12 @@ document.addEventListener("DOMContentLoaded", function() {
         else {
             console.error("Symbol is already present")
         }
-        if(isAction(symbol))
-            current.innerHTML = symbol;
         history.innerHTML = executionLine;
+        if (isAction(symbol)) {
+            current.innerHTML = symbol;
     }
 
+    // Evaluating generated expression
     const evalExp = function (expression){
         console.log("Evaluating.", expression);
         const answer = 'answer';
@@ -34,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
         current.innerHTML = answer;
     }
 
+    // Adding numeric values to the expression
     const addNumber = function(number) {
         let last = executionLine[executionLine.length-1];
         let preLast = executionLine[executionLine.length-2];
@@ -48,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
         history.innerHTML = executionLine;
     }
 
+    // Listening for the click events of the control buttonss
     for(let button of buttons){
         button.addEventListener('click', function(event) {
             let btnValue = event.target.dataset.value;
