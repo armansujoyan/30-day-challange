@@ -5,11 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const current = document.querySelector('#current #output-text');
     let executionLine = "";
 
-    // Modifying history display for aesthetic reasons and better UX.g
-
     // Fucntion to check if the current input button is an action button.
     const isAction = function(symbol) {
-        return symbol === '+' || symbol === '-' || symbol === '/' || symbol === 'x'
+        return symbol === '+' || symbol === '-' || symbol === '/' || symbol === '*'
                 || symbol === '%';
     }
 
@@ -30,14 +28,17 @@ document.addEventListener("DOMContentLoaded", function() {
         history.innerHTML = executionLine;
         if (isAction(symbol)) {
             current.innerHTML = symbol;
+        } else {
+            current.innerHTML += symbol;
         }
     }
 
     // Evaluating generated expression
     const evalExp = function (expression){
         console.log("Evaluating.", expression);
-        const answer = 'answer';
-        history.innerHTML += '=';
+        const answer = eval(expression);
+        if (history.innerHTML[history.innerHTML.length-1] !== '=')
+            history.innerHTML += '=';
         current.innerHTML = answer;
     }
 
@@ -83,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 case '.':
                 case '+':
                 case '-':
-                case 'x':
+                case '*':
                 case '/':
                 case '%':
                     addSymbol(btnValue)
