@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
         history.innerHTML = executionLine;
         if (isAction(symbol)) {
             current.innerHTML = symbol;
+        }
     }
 
     // Evaluating generated expression
