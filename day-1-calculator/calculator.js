@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     executionLine = executionLine.replaceAt(executionLine.lastIndexOf("+"),'-');
                 } else if (executionLine.lastIndexOf("-") > -1) {
                     executionLine = executionLine.replaceAt(executionLine.lastIndexOf("-"),'+');
-                } else if (/[*,/,%]/g.exec(executionLine).length === 0){
+                } else if (!/[*,/,%]/g.exec(executionLine)){
                     executionLine = "-" + executionLine;
                 }
             }
@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error("Symbol is already present")
         }
         history.innerHTML = executionLine;
-        if (isAction(symbol)) {
+        if (isAction(symbol) && symbol!=='plusmn') {
             current.innerHTML = symbol;
-        } else {
+        } else if(symbol !== 'plusmn') {
             current.innerHTML += symbol;
         }
     }
