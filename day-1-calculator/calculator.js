@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Defining the replace at function for later use
+    String.prototype.replaceAt=function(index, replacement) {
+        return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
+    }
+
     // General variables to be used
     const buttons = document.querySelectorAll('.ui-button');
     const history = document.querySelector('#history #history-out');
@@ -8,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Fucntion to check if the current input button is an action button.
     const isAction = function(symbol) {
         return symbol === '+' || symbol === '-' || symbol === '/' || symbol === '*'
-                || symbol === '%';
+                || symbol === '%' || symbol === 'plusmn';
     }
 
     // Generic symbol input for the expression
@@ -17,10 +22,26 @@ document.addEventListener("DOMContentLoaded", function() {
         if (last === '.' && isAction(symbol)) {
             executionLine += '0';
         }
-        if (isAction(symbol) && isAction(last)) {
+        if (isAction(symbol) && isAction(last) && symbol !== 'plusmn') {
             executionLine = executionLine.replace(/.$/, symbol);
-        } else if (last !== symbol) {
+        } else if (last !== symbol && symbol !== 'plusmn') {
             executionLine += symbol;
+        } else if (symbol === '0') {
+            executionLine += symbol;
+        } else if (symbol === 'plusmn') {
+            if(last === '-')
+                executionLine = executionLine.replace(/.$/, '+');
+            else if(last === '+')
+                executionLine = executionLine.replace(/.$/, '-');
+            else {
+                if(executionLine.lastIndexOf("+") > -1) {
+                    executionLine = executionLine.replaceAt(executionLine.lastIndexOf("+"),'-');
+                } else if (executionLine.lastIndexOf("-") > -1) {
+                    executionLine = executionLine.replaceAt(executionLine.lastIndexOf("-"),'+');
+                } else if (/[*,/,%]/g.exec(executionLine).length === 0){
+                    executionLine = "-" + executionLine;
+                }
+            }
         }
         else {
             console.error("Symbol is already present")
@@ -87,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 case '*':
                 case '/':
                 case '%':
+                case 'plusmn':
                     addSymbol(btnValue)
                     break
                 case "execute":
