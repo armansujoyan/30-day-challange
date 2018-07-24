@@ -7,19 +7,21 @@ body {
     align-items: center;
     background: $background;
     main {
-        background: linear-gradient($skyDaylightStart,$skyDaylightEnd);
+        background: $skyDaylightStart;
         min-width: 300px;
         min-height: 300px;
         border-radius: 85px;
         position: relative;
         overflow: hidden;
+        animation: sky 3s ease-in-out infinite forwards;
         .mountain {
             position: absolute;
             transform: rotateZ(45deg);
             width: 300px;
             height: 300px;
-            background: $mountainDay;
-            box-shadow: 3px 3px 26px 7px darken($mountainDay,20%);
+            background: darken($mountainDay,10%);
+            box-shadow: 0px 0px 0px 0px darken($mountainDay,20%);
+            animation: mountain 3s ease-in-out infinite forwards;
         }
         .first {
             top: 175px;
@@ -42,6 +44,7 @@ body {
             top: 75px;
             left: -60px;
             background: radial-gradient($sunStart,$sunEnd);
+            box-shadow: 0px 0px 0px 0px rgba(255, 255, 190, .75);
             border-radius: 75px;
             animation: sun 3s linear infinite normal forwards;
         }

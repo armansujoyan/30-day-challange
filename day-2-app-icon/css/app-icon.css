@@ -1,42 +1,110 @@
 @-webkit-keyframes sun {
   0% {
     top: 75px;
-    left: -60px; }
+    left: -60px;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(255, 255, 190, 0.75);
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 190, 0.75); }
   40% {
     top: 27px;
-    left: 80px; }
+    left: 80px;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, 0.75);
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, 0.75); }
   50% {
     top: 20px;
-    left: 120px; }
+    left: 120px;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, 0.75);
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, 0.75); }
   60% {
     top: 27px;
-    left: 160px; }
+    left: 160px;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(255, 255, 190, 0.75);
+    box-shadow: 0px 0px 10px 3px rgba(255, 255, 190, 0.75); }
   80% {
     top: 45px;
-    left: 220px; }
+    left: 220px;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(255, 255, 190, 0.75);
+    box-shadow: 0px 0px 5px 1px rgba(255, 255, 190, 0.75); }
   100% {
     top: 75px;
-    left: 300px; } }
+    left: 300px;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(255, 255, 190, 0.75);
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 190, 0.75); } }
 
 @keyframes sun {
   0% {
     top: 75px;
-    left: -60px; }
+    left: -60px;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(255, 255, 190, 0.75);
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 190, 0.75); }
   40% {
     top: 27px;
-    left: 80px; }
+    left: 80px;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, 0.75);
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, 0.75); }
   50% {
     top: 20px;
-    left: 120px; }
+    left: 120px;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, 0.75);
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, 0.75); }
   60% {
     top: 27px;
-    left: 160px; }
+    left: 160px;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(255, 255, 190, 0.75);
+    box-shadow: 0px 0px 10px 3px rgba(255, 255, 190, 0.75); }
   80% {
     top: 45px;
-    left: 220px; }
+    left: 220px;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(255, 255, 190, 0.75);
+    box-shadow: 0px 0px 5px 1px rgba(255, 255, 190, 0.75); }
   100% {
     top: 75px;
-    left: 300px; } }
+    left: 300px;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(255, 255, 190, 0.75);
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 190, 0.75); } }
+
+@-webkit-keyframes sky {
+  0% {
+    background: #322371c7; }
+  50% {
+    background: #e55b5b; }
+  100% {
+    background: #322371c7; } }
+
+@keyframes sky {
+  0% {
+    background: #322371c7; }
+  50% {
+    background: #e55b5b; }
+  100% {
+    background: #322371c7; } }
+
+@-webkit-keyframes mountain {
+  0% {
+    background: #1d1c21;
+    -webkit-box-shadow: 2px 2px 20px 4px #050505;
+    box-shadow: 2px 2px 20px 4px #050505; }
+  50% {
+    background: #504d5c;
+    -webkit-box-shadow: 3px 3px 26px 7px #050505;
+    box-shadow: 3px 3px 26px 7px #050505; }
+  100% {
+    background: #1d1c21;
+    -webkit-box-shadow: 2px 2px 20px 4px #050505;
+    box-shadow: 2px 2px 20px 4px #050505; } }
+
+@keyframes mountain {
+  0% {
+    background: #1d1c21;
+    -webkit-box-shadow: 2px 2px 20px 4px #050505;
+    box-shadow: 2px 2px 20px 4px #050505; }
+  50% {
+    background: #504d5c;
+    -webkit-box-shadow: 3px 3px 26px 7px #050505;
+    box-shadow: 3px 3px 26px 7px #050505; }
+  100% {
+    background: #1d1c21;
+    -webkit-box-shadow: 2px 2px 20px 4px #050505;
+    box-shadow: 2px 2px 20px 4px #050505; } }
 
 body {
   display: -webkit-box;
@@ -50,15 +118,14 @@ body {
   align-items: center;
   background: #FCE4E8; }
   body main {
-    background: -webkit-gradient(linear, left top, left bottom, from(#e55b5b), to(#ff0000));
-    background: -webkit-linear-gradient(#e55b5b, #ff0000);
-    background: -o-linear-gradient(#e55b5b, #ff0000);
-    background: linear-gradient(#e55b5b, #ff0000);
+    background: #e55b5b;
     min-width: 300px;
     min-height: 300px;
     border-radius: 85px;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-animation: sky 3s ease-in-out infinite forwards;
+    animation: sky 3s ease-in-out infinite forwards; }
     body main .mountain {
       position: absolute;
       -webkit-transform: rotateZ(45deg);
@@ -66,9 +133,11 @@ body {
       transform: rotateZ(45deg);
       width: 300px;
       height: 300px;
-      background: #35333D;
-      -webkit-box-shadow: 3px 3px 26px 7px #050505;
-      box-shadow: 3px 3px 26px 7px #050505; }
+      background: #1d1c21;
+      -webkit-box-shadow: 0px 0px 0px 0px #050505;
+      box-shadow: 0px 0px 0px 0px #050505;
+      -webkit-animation: mountain 3s ease-in-out infinite forwards;
+      animation: mountain 3s ease-in-out infinite forwards; }
     body main .first {
       top: 175px;
       z-index: 2; }
@@ -89,6 +158,8 @@ body {
       background: -webkit-radial-gradient(#E5BC5B, #E5CC73);
       background: -o-radial-gradient(#E5BC5B, #E5CC73);
       background: radial-gradient(#E5BC5B, #E5CC73);
+      -webkit-box-shadow: 0px 0px 0px 0px rgba(255, 255, 190, 0.75);
+      box-shadow: 0px 0px 0px 0px rgba(255, 255, 190, 0.75);
       border-radius: 75px;
       -webkit-animation: sun 3s linear infinite normal forwards;
       animation: sun 3s linear infinite normal forwards; }
