@@ -1,0 +1,47 @@
+@import 'colors';
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $background;
+    main {
+        background: linear-gradient(#e55b5b,#ff0000);
+        min-width: 300px;
+        min-height: 300px;
+        border-radius: 85px;
+        position: relative;
+        overflow: hidden;
+        .mountain {
+            position: absolute;
+            transform: rotateZ(45deg);
+            width: 300px;
+            height: 300px;
+            background: #35333D;
+            box-shadow: 3px 3px 26px 7px darken(#35333D,20%);
+        }
+        .first {
+            top: 175px;
+            z-index: 2;
+        }
+        .second {
+            top: 220px;
+            left: -37%;
+            z-index: 1;
+        }
+        .third {
+            top: 220px;
+            right: -30%;
+            z-index: 3;
+        }
+        .sun {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: 45px;
+            left: 50px;
+            background: radial-gradient(#E5BC5B,#E5CC73);
+            border-radius: 75px;
+        }
+    }
+}
