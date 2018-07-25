@@ -79,7 +79,7 @@ body {
       font-family: Arial, Helvetica, sans-serif;
       cursor: pointer; }
       body div#controls div.ui-button:hover {
-        background-color: #4d4d4d;
+        background-color: #353535;
         border-radius: 26px;
         opacity: 0.5; }
     body div#controls div.zero-btn {
@@ -89,11 +89,11 @@ body {
       -ms-flex-pack: start;
       justify-content: flex-start; }
     body div#controls div.action-btn {
-      color: #FF2E2B; }
+      color: #FB1800; }
     body div#controls div.equal-btn {
-      background-color: #FF2E2B;
+      background-color: #FB1800;
       border-radius: 24px; }
       body div#controls div.equal-btn:hover {
-        background-color: #ff605e;
+        background-color: #ff432f;
         border-radius: 26px;
         opacity: 0.95; }
