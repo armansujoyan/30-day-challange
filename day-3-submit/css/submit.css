@@ -5,6 +5,13 @@
     --placeholder-col: #D0D4D7;
 }
 
+
+@keyframes submit {
+    0% {left: 0px;}
+    30% {left: -20px;}
+    100% {left: 1000px}
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -15,14 +22,20 @@ body {
 
 main {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.animator {
+    position: absolute;
+    top: 42%;
+    left: 30%;
 }
 
 .container {
-    width: 40%;
+    width: 100%;
     position: relative;
+    left: 0px;
 }
 
 #submit {
@@ -85,4 +98,8 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 
 .mail-ico-active {
     background-position-y: -24px !important;
+}
+
+.animate {
+    animation: submit 2s ease-in 1 forwards !important;
 }
