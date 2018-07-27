@@ -4,9 +4,10 @@ document.addEventListener("DOMContentLoaded", function (){
     const mailButton = document.querySelector('#mail-btn');
     const container = document.querySelector('.container');
     const regex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    let answer = Boolean;
 
     input.addEventListener("input", function(event) {
-        let answer = regex.test(String(event.target.value).toLowerCase());
+        answer = regex.test(String(event.target.value).toLowerCase());
         if (event.target.value.length >= 1) {
             mailButton.classList.add('mail-ico-active');
         } else [
@@ -20,9 +21,11 @@ document.addEventListener("DOMContentLoaded", function (){
     })
 
     submit.addEventListener("click", function() {
-        container.classList.add('animate')
-        setTimeout(() => {
-            container.classList.remove('animate');
-        },2000)
+        if (answer) {
+            container.classList.add('animate')
+            setTimeout(() => {
+                container.classList.remove('animate');
+            },1000)
+        }
     })
 })
