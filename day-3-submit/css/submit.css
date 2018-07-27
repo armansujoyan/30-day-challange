@@ -1,5 +1,6 @@
 :root {
     --background-col: #3C9EFF;
+    --caret-col: #348ADF;
 }
 
 body {
@@ -47,7 +48,6 @@ main {
     top: 22px;
     left: 11px;
     background: url(../images/email-icon-sprite.png) no-repeat;
-    /* background-position-y: 24px; */
 }
 
 input[type="email"] {
@@ -60,8 +60,14 @@ input[type="email"] {
     text-transform: uppercase;
     border-radius: 6px;
     border: none;
+    transition: all linear 2s;
+    caret-color: var(--caret-col);
 }
 
 input[type="email"]:focus {
     outline: none;
+}
+
+.mail-ico-active {
+    background-position-y: -24px !important;
 }
