@@ -6,3 +6,6 @@ Assembling creative UI/UX designs created by various UI/UX artists all over the 
 
 ## Day 2
 => Animated Application Icon by [Alexandr Zaytsev](https://dribbble.com/shots/2515149-Japanese-Icon-for-Photo-Editor)
+
+## Day 3
+=> E-mail submission by Icon by [Oleg Frolov](https://dribbble.com/shots/2377734-Subscribe)
