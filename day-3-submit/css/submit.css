@@ -1,6 +1,8 @@
 :root {
     --background-col: #3C9EFF;
     --caret-col: #348ADF;
+    --shadow-col: rgb(64, 64, 65);
+    --placeholder-col: #D0D4D7;
 }
 
 body {
@@ -60,12 +62,25 @@ input[type="email"] {
     text-transform: uppercase;
     border-radius: 6px;
     border: none;
-    transition: all linear 2s;
+    box-shadow: 0px 0px 15px -1px var(--shadow-col);
     caret-color: var(--caret-col);
 }
 
 input[type="email"]:focus {
     outline: none;
+}
+
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--placeholder-col);
+    opacity: 1; /* Firefox */
+}
+
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--placeholder-col);
+}
+
+input::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--placeholder-col);
 }
 
 .mail-ico-active {
